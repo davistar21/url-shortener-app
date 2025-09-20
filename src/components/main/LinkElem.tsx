@@ -1,16 +1,12 @@
 import { useState } from "react";
 import copyToClipboard from "../../utils/copyToClipboard";
 import { Button } from "../ui/button";
-
-const LinkElem = ({
-  idx,
-  longLink,
-  url,
-}: {
+type LinkElemProps = {
   idx: number;
   longLink: string;
   url: string;
-}) => {
+};
+const LinkElem = ({ idx, longLink, url }: LinkElemProps) => {
   const [isCopied, setIsCopied] = useState<boolean>(false);
   const handleCopy = () => {
     copyToClipboard(url);

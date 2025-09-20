@@ -1,7 +1,9 @@
+//@ts-ignore
 import { Button } from "@/components/ui/button";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import LinkElem from "../main/LinkElem";
+import isValidUrl from "../../utils/isValidUrl";
 
 const Main = () => {
   const [newUrls, setNewUrls] = useState<string[]>([]);
@@ -31,18 +33,6 @@ const Main = () => {
     }
   }, []);
 
-  const copyToClipboard = (url: string) => {
-    navigator.clipboard
-      .writeText(url)
-
-      .catch((err) => {
-        console.error("Error copying URL: ", err);
-      });
-  };
-  const isValidUrl = (url: string) => {
-    const regex = /^(https?:\/\/[^\s$.?#].[^\s]*)$/;
-    return regex.test(url);
-  };
   const shortenUrl = async (url: string) => {
     setLoading(true);
     setError("");
@@ -155,6 +145,7 @@ const Main = () => {
         {newUrls.map((url, idx) => {
           const longLink = longLinks[idx];
           // const [isCopied, setIsCopied] = useState<boolean>(false);
+          //@ts-ignore
           return <LinkElem key={idx} longLink={longLink} url={url} />;
         })}
       </div>
