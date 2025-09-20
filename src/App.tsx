@@ -1,5 +1,5 @@
 import Header from "./components/Layout/Header";
-import Main from "./components/Layout/Main";
+import Main from "./components/Layout/Main.tsx";
 import Footer from "./components/Layout/Footer";
 const App = () => {
   return (
