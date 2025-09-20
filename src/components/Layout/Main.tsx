@@ -47,7 +47,7 @@ const Main = () => {
     }
     try {
       const res = await axios.post(
-        "/api/v1/shorten",
+        "https://cleanuri.com/api/v1/shorten",
         new URLSearchParams({
           url,
         }),
