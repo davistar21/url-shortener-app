@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <header className=" p-4 flex gap-4 my-2 relative justify-between  items-center md:mx-6 mx-2">
+    <header className=" p-4 flex gap-4 my-2 relative justify-between  items-center md:mx-24 mx-2">
       <img src="images/logo.svg" alt="" className="object-contain" />
       {!isOpen ? (
         <MenuIcon

@@ -76,10 +76,10 @@ const Main = () => {
     }
   };
   return (
-    <main className="flex flex-col gap-2 md:mx-6 mx-2">
+    <main className="flex flex-col gap-2 md:mx-24 mx-2">
       <div className="flex flex-col-reverse lg:flex-row items-center gap-5 mb-10">
-        <div className="justify-center items-center flex flex-col text-center">
-          <h3 className="font-bold text-[44px]  lg:mb-4 ">
+        <div className="justify-center items-center md:items-start flex flex-col md:text-left text-center">
+          <h3 className="font-bold  text-[44px] lg:text-6xl  lg:mb-4 ">
             More than just shorter links
           </h3>
           <div className="text-gray-400 mb-4">
