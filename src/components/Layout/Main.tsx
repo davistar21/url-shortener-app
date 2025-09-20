@@ -71,7 +71,7 @@ const Main = () => {
       }
     } catch (err: any) {
       console.error("Error shortening url: ", err.message);
-      setError("An error occurred while shortening the URL");
+      setError("Error: " + err.message);
     } finally {
       setLoading(false);
     }
@@ -141,7 +141,7 @@ const Main = () => {
           </Button>
         </div>
       </div>
-      <div className="max-w-[800px] mx-auto w-full">
+      <div className="max-w-[800px] mx-auto w-full max-h-[400px] overflow-y-auto scrollbar scrollbar-thin">
         {newUrls.map((url, idx) => {
           const longLink = longLinks[idx];
           // const [isCopied, setIsCopied] = useState<boolean>(false);

@@ -9,7 +9,7 @@ body {
 input {
   all: unset;
 }
-.scrollbar {
+.custom-scrollbar {
   scrollbar-width: none;
 }
 @keyframes bounce {
