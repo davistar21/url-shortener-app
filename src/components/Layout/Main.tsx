@@ -47,7 +47,8 @@ const Main = () => {
     }
     try {
       const res = await axios.post(
-        "https://cleanuri.com/api/v1/shorten",
+        "https://corsproxy.io/?" +
+          encodeURIComponent("https://cleanuri.com/api/v1/shorten"),
         new URLSearchParams({
           url,
         }),
