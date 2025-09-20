@@ -95,7 +95,7 @@ const Main = () => {
       <div className="bg-[#3b3054] relative flex flex-col p-5 max-w-[800px] w-full mx-auto overflow-hidden rounded-lg">
         <div className="absolute z-0 inset-0">
           <img
-            src="public/images/bg-shorten-desktop.svg"
+            src="/images/bg-shorten-desktop.svg"
             alt=""
             className="object-cover w-full inset-0 h-full"
           />
