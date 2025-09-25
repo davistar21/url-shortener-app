@@ -10,6 +10,16 @@ const Main = () => {
   const [inputValue, setInputValue] = useState<string>("");
   const [error, setError] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
+  const handleScroll = (e) => {
+    e.preventDefault();
+    const target = document.getElementById("link");
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  };
 
   const saveLinksToLocalStorage = (longUrls: string[], shortUrls: string[]) => {
     const links = {
@@ -87,14 +97,16 @@ const Main = () => {
             Build your brand's recognition and get detailed insights on how your
             links are performing
           </div>
-          <Button className="rounded-full hover:opacity-70 transition-all px-6">
-            Get Started
-          </Button>
+          <a href="#link" onClick={handleScroll}>
+            <Button className="rounded-full hover:opacity-70 transition-all px-6">
+              Get Started
+            </Button>
+          </a>
         </div>
         <img src="/images/illustration-working.svg" alt="" />
       </div>
       <div className="bg-[#3b3054] relative flex flex-col p-5 max-w-[800px] w-full mx-auto overflow-hidden rounded-lg">
-        <div className="absolute z-0 inset-0">
+        <div id="link" className="absolute z-0 inset-0">
           <img
             src="/images/bg-shorten-desktop.svg"
             alt=""

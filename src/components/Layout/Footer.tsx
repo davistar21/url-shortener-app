@@ -1,5 +1,16 @@
 import { Button } from "../ui/button";
 const Footer = () => {
+  const handleScroll = (e) => {
+    e.preventDefault();
+    const target = document.getElementById("link");
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  };
+
   return (
     <footer>
       <section className="relative w-full bg-[#3b3054] flex flex-col items-center gap-4 py-12">
@@ -12,7 +23,9 @@ const Footer = () => {
           <div className="text-3xl font-semibold text-white ">
             Boost your links today
           </div>
-          <Button className="rounded-full px-6 w-fit">Get Started</Button>
+          <a href="#link" onClick={handleScroll}>
+            <Button className="rounded-full px-6 w-fit">Get Started</Button>
+          </a>
         </div>
       </section>
       <section className="bg-[#232127] pt-10 pb-16 px-20 text-gray-400 flex md:flex-row flex-col items-center md:items-start justify-around gap-6">

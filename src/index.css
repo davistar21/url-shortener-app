@@ -5,6 +5,7 @@ html,
 body {
   @apply font-sans;
   background-color: hsl(0, 50%, 98%);
+  scroll-behavior: smooth;
 }
 input {
   all: unset;
